@@ -1,31 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
-  
+  <title>梦醒❤️ fake</title>
+  <subtitle>梦醒&amp;fake的技术博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-11-15T08:05:49.000Z</updated>
+  <updated>2016-11-15T10:16:24.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>梦醒&amp;fake</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>text1</title>
-    <link href="http://yoursite.com/2016/11/15/text1/"/>
-    <id>http://yoursite.com/2016/11/15/text1/</id>
-    <published>2016-11-15T08:05:49.000Z</published>
-    <updated>2016-11-15T08:05:49.000Z</updated>
+    <title>text222</title>
+    <link href="http://yoursite.com/2016/11/15/text222/"/>
+    <id>http://yoursite.com/2016/11/15/text222/</id>
+    <published>2016-11-15T10:00:00.000Z</published>
+    <updated>2016-11-15T10:16:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="312312"><a href="#312312" class="headerlink" title="312312"></a>312312</h1>]]></content>
     
     <summary type="html">
     
+      &lt;h1 id=&quot;312312&quot;&gt;&lt;a href=&quot;#312312&quot; class=&quot;headerlink&quot; title=&quot;312312&quot;&gt;&lt;/a&gt;312312&lt;/h1&gt;
+    
     </summary>
     
+      <category term="PHP" scheme="http://yoursite.com/categories/PHP/"/>
+    
+    
+      <category term="haha" scheme="http://yoursite.com/tags/haha/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>text1</title>
+    <link href="http://yoursite.com/2016/11/15/text1/"/>
+    <id>http://yoursite.com/2016/11/15/text1/</id>
+    <published>2016-11-15T08:05:00.000Z</published>
+    <updated>2016-11-15T10:18:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="11111"><a href="#11111" class="headerlink" title="11111"></a>11111</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;11111&quot;&gt;&lt;a href=&quot;#11111&quot; class=&quot;headerlink&quot; title=&quot;11111&quot;&gt;&lt;/a&gt;11111&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="qqqq" scheme="http://yoursite.com/categories/qqqq/"/>
+    
+    
+      <category term="php" scheme="http://yoursite.com/tags/php/"/>
     
   </entry>
   
