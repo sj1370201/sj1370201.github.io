@@ -48,13 +48,14 @@
     <link href="http://yoursite.com/2016/11/15/text222/"/>
     <id>http://yoursite.com/2016/11/15/text222/</id>
     <published>2016-11-15T10:00:00.000Z</published>
-    <updated>2016-11-15T14:16:24.000Z</updated>
+    <updated>2016-11-16T02:11:44.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="312312"><a href="#312312" class="headerlink" title="312312"></a>312312</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">$a = <span class="keyword">array</span>(</div><div class="line">	<span class="string">'a'</span>=&gt;<span class="number">1</span>,</div><div class="line">	<span class="string">'b'</span>=&gt;<span class="number">2</span></div><div class="line">);</div><div class="line">array_merge($a,$a);</div><div class="line"><span class="keyword">foreach</span>($a <span class="keyword">as</span> $v)&#123;</div><div class="line">	<span class="keyword">echo</span> $v;</div><div class="line">&#125;</div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="312312"><a href="#312312" class="headerlink" title="312312"></a>312312</h1><p>###<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">$a = <span class="keyword">array</span>(</div><div class="line">	<span class="string">'a'</span>=&gt;<span class="number">1</span>,</div><div class="line">	<span class="string">'b'</span>=&gt;<span class="number">2</span></div><div class="line">);</div><div class="line">array_merge($a,$a);</div><div class="line"><span class="keyword">foreach</span>($a <span class="keyword">as</span> $v)&#123;</div><div class="line">	<span class="keyword">echo</span> $v;</div><div class="line">&#125;</div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure></p>
+]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;312312&quot;&gt;&lt;a href=&quot;#312312&quot; class=&quot;headerlink&quot; title=&quot;312312&quot;&gt;&lt;/a&gt;312312&lt;/h1&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutte
+      &lt;h1 id=&quot;312312&quot;&gt;&lt;a href=&quot;#312312&quot; class=&quot;headerlink&quot; title=&quot;312312&quot;&gt;&lt;/a&gt;312312&lt;/h1&gt;&lt;p&gt;###&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl
     
     </summary>
     
