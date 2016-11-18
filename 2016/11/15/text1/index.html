@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="php," />
+  <meta name="keywords" content="mns," />
 
 
 
@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="11111">
+<meta name="description" content="下载阿里云php的sdk,放到libraries目录下">
 <meta property="og:type" content="article">
-<meta property="og:title" content="text1">
+<meta property="og:title" content="Lavavel 使用阿里云队列消息服务MNS">
 <meta property="og:url" content="http://yoursite.com/2016/11/15/text1/index.html">
 <meta property="og:site_name" content="梦醒&fake">
-<meta property="og:description" content="11111">
-<meta property="og:updated_time" content="2016-11-15T10:18:36.000Z">
+<meta property="og:description" content="下载阿里云php的sdk,放到libraries目录下">
+<meta property="og:updated_time" content="2016-11-18T10:36:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="text1">
-<meta name="twitter:description" content="11111">
+<meta name="twitter:title" content="Lavavel 使用阿里云队列消息服务MNS">
+<meta name="twitter:description" content="下载阿里云php的sdk,放到libraries目录下">
 
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <title> text1 | 梦醒&fake </title>
+  <title> Lavavel 使用阿里云队列消息服务MNS | 梦醒&fake </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -305,7 +305,7 @@
             
             
               
-                text1
+                Lavavel 使用阿里云队列消息服务MNS
               
             
           </h1>
@@ -337,8 +337,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/qqqq/" itemprop="url" rel="index">
-                    <span itemprop="name">qqqq</span>
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
                   </a>
                 </span>
 
@@ -379,7 +379,15 @@
       
 
       
-        <h1 id="11111"><a href="#11111" class="headerlink" title="11111"></a>11111</h1>
+        <ol>
+<li>下载阿里云php的sdk,放到libraries目录下<a id="more"></a></li>
+<li><p>项目入口文件加入</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">require</span> <span class="keyword">__DIR__</span>.<span class="string">'/../app/Libraries/ALMNS/mns-autoloader.php'</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建一个service服务</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"></div><div class="line"><span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Services</span>;</div><div class="line"></div><div class="line"><span class="keyword">use</span> <span class="title">AliyunMNS</span>\<span class="title">Client</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">AliyunMNS</span>\<span class="title">Requests</span>\<span class="title">SendMessageRequest</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">AliyunMNS</span>\<span class="title">Requests</span>\<span class="title">CreateQueueRequest</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">AliyunMNS</span>\<span class="title">Exception</span>\<span class="title">MnsException</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">AlmnsService</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">static</span> $queueName = <span class="string">""</span>;</div><div class="line">    <span class="keyword">static</span> $accessId = <span class="string">""</span>;</div><div class="line">    <span class="keyword">static</span> $accessKey = <span class="string">""</span>;</div><div class="line">    <span class="keyword">static</span> $endPoint = <span class="string">""</span>;</div><div class="line">    <span class="keyword">protected</span> $client;</div><div class="line">    </div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;client = <span class="keyword">new</span> Client(<span class="keyword">self</span>::$endPoint, <span class="keyword">self</span>::$accessId, <span class="keyword">self</span>::$accessKey);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">SendMessage</span><span class="params">($messageBody)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="comment">// 1. 首先获取Queue的实例</span></div><div class="line">        <span class="comment">// 1.1 PHP SDK默认会对发送的消息做Base64 Encode，对接收到的消息做Base64 Decode。</span></div><div class="line">        <span class="comment">// 1.2 如果不希望SDK做这样的Base64操作，可以在getQueueRef的时候，传入参数$base64=FALSE。即$queue = $this-&gt;client-&gt;getQueueRef($queueName, FALSE);</span></div><div class="line">        $queue = <span class="keyword">$this</span>-&gt;client-&gt;getQueueRef(<span class="keyword">self</span>::$queueName, <span class="keyword">FALSE</span>);</div><div class="line">        $request = <span class="keyword">new</span> SendMessageRequest($messageBody);</div><div class="line">        <span class="keyword">try</span></div><div class="line">        &#123;</div><div class="line">            $res = $queue-&gt;sendMessage($request);</div><div class="line">            <span class="comment">// 3. 消息发送成功</span></div><div class="line">            <span class="keyword">echo</span> <span class="string">"MessageSent! \n"</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">catch</span> (MnsException $e)</div><div class="line">        &#123;</div><div class="line">            <span class="comment">// 4. 可能因为网络错误，或MessageBody过大等原因造成发送消息失败，这里CatchException并做对应的处理。</span></div><div class="line">            <span class="keyword">echo</span> <span class="string">"SendMessage Failed: "</span> . $e . <span class="string">"\n"</span>;</div><div class="line">            <span class="keyword">echo</span> <span class="string">"MNSErrorCode: "</span> . $e-&gt;getMnsErrorCode() . <span class="string">"\n"</span>;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">receiveMessage</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $queue = <span class="keyword">$this</span>-&gt;client-&gt;getQueueRef(<span class="keyword">self</span>::$queueName, <span class="keyword">FALSE</span>);</div><div class="line">        $receiptHandle = <span class="keyword">NULL</span>;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="comment">/*</span></div><div class="line">            1. 直接调用receiveMessage函数</div><div class="line">            1.1 receiveMessage函数接受waitSeconds参数，无特殊情况这里都是建议设置为30</div><div class="line">            1.2 waitSeconds非0表示这次receiveMessage是一次http long polling，如果queue内刚好没有message，</div><div class="line">            那么这次request会在server端等到queue内有消息才返回。最长等待时间为waitSeconds的值，最大为30。</div><div class="line">            */</div><div class="line">            $res = $queue-&gt;receiveMessage(<span class="number">30</span>);</div><div class="line">            <span class="keyword">echo</span> <span class="string">"ReceiveMessage Succeed! \n"</span>;</div><div class="line">            <span class="comment">// 2. 获取ReceiptHandle，这是一个有时效性的Handle，可以用来设置Message的各种属性和删除Message。</span></div><div class="line">            <span class="comment">//具体的解释请参考：help.aliyun.com/document_detail/27477.html 页面里的ReceiptHandle</span></div><div class="line">            $receiptHandle = $res-&gt;getReceiptHandle();</div><div class="line">        &#125; <span class="keyword">catch</span> (MnsException $e) &#123;</div><div class="line">            <span class="comment">// 3. 像前面的CreateQueue和SendMessage一样，我们认为ReceiveMessage也是有可能出错的，所以这里加上CatchException并做对应的处理。</span></div><div class="line">            <span class="keyword">echo</span> <span class="string">"ReceiveMessage Failed: "</span> . $e . <span class="string">"\n"</span>;</div><div class="line">            <span class="keyword">echo</span> <span class="string">"MNSErrorCode: "</span> . $e-&gt;getMnsErrorCode() . <span class="string">"\n"</span>;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">            <span class="comment">// 这里是用户自己的处理消息的逻辑。Sample里就直接略过这一步了。</span></div><div class="line">            <span class="comment">// 如果这里发生了程序崩溃或卡住等异常情况，对应的Message会在VisibilityTimeout之后重新可见，从而可以被其他进程处理，避免消息丢失。</span></div><div class="line">            <span class="comment">// 4. 现在消息已经处理完了。我们可以从队列里删除这条消息了。</span></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="comment">// 5. 直接调用deleteMessage即可。</span></div><div class="line">            $res = $queue-&gt;deleteMessage($receiptHandle);</div><div class="line">            <span class="keyword">echo</span> <span class="string">"DeleteMessage Succeed! \n"</span>;</div><div class="line">        &#125; <span class="keyword">catch</span> (MnsException $e) &#123;</div><div class="line">            <span class="comment">// 6. 这里CatchException并做异常处理</span></div><div class="line">            <span class="comment">// 6.1 如果是receiptHandle已经过期，那么ErrorCode是MessageNotExist，表示通过这个receiptHandle已经找不到对应的消息。</span></div><div class="line">            <span class="comment">// 6.2 为了保证receiptHandle不过期，VisibilityTimeout的设置需要保证足够消息处理完成。并且在消息处理过程中，也可以调用changeMessageVisibility这个函数来延长消息的VisibilityTimeout时间。</span></div><div class="line">            <span class="keyword">echo</span> <span class="string">"DeleteMessage Failed: "</span> . $e . <span class="string">"\n"</span>;</div><div class="line">            <span class="keyword">echo</span> <span class="string">"MNSErrorCode: "</span> . $e-&gt;getMnsErrorCode() . <span class="string">"\n"</span>;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ol>
+
       
     </div>
 
@@ -402,7 +410,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/php/" rel="tag"># php</a>
+            <a href="/tags/mns/" rel="tag"># mns</a>
           
         </div>
       
@@ -452,7 +460,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/11/15/text1/"
-           data-title="text1" data-url="http://yoursite.com/2016/11/15/text1/">
+           data-title="Lavavel 使用阿里云队列消息服务MNS" data-url="http://yoursite.com/2016/11/15/text1/">
       </div>
     
   </div>
@@ -476,17 +484,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -546,22 +545,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#11111"><span class="nav-number">1.</span> <span class="nav-text">11111</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
